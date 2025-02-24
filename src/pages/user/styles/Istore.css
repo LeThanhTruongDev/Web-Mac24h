@@ -1,0 +1,43 @@
+.istore-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 300px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.istore-dropdown.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.istore-section {
+  margin-bottom: 16px;
+}
+
+.istore-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.istore-link:hover {
+  color: #0070f3;
+}
+
+/* Optional: Add hover effect for the dropdown container */
+.istore-dropdown:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}

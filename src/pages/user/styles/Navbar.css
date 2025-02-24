@@ -1,0 +1,108 @@
+/* styles.css */
+
+/* Container cho dropdown */
+/* Dropdown container */
+.mac-store-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 1200px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 8px 8px;
+    z-index: 50;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    gap: 16px;
+    padding: 16px;
+  
+    /* Hidden state */
+    opacity: 0;
+    transform: translateY(-10px); /* Slightly move upward */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    pointer-events: none; /* Disable clicks when hidden */
+  }
+  
+  /* Dropdown when visible */
+  .mac-store-dropdown.visible {
+    opacity: 1;
+    transform: translateY(0); /* Reset position */
+    pointer-events: auto; /* Enable interaction */
+  }
+  
+/* Section trong dropdown */
+.mac-store-section {
+  padding-bottom: 16px;
+}
+
+/* Tiêu đề section */
+.mac-store-section h3 {
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Các liên kết */
+.mac-store-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4b5563; /* gray-600 */
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 12px;
+}
+
+.mac-store-link:hover {
+  color: #1d4ed8; /* blue-600 */
+}
+
+/* Biểu tượng nhỏ bên phải */
+.mac-store-link .text-xs {
+  font-size: 0.75rem;
+}
+
+/* Grid cho hình ảnh */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Hiển thị 3 hình ảnh theo hàng ngang */
+  gap: 8px; /* Khoảng cách giữa các hình ảnh */
+}
+
+/* Hình ảnh */
+.image-grid img {
+  width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng của cột */
+  height: 120px; /* Chiều cao cố định cho hình ảnh */
+  object-fit: cover; /* Hình ảnh không bị méo */
+  border-radius: 8px; /* Bo góc nhẹ */
+  transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+/* Container cho hình ảnh với vạch kẻ */
+.mac-image-container {
+  display: flex;
+  align-items: center; /* Căn giữa hình ảnh và vạch kẻ */
+  gap: 8px; /* Khoảng cách giữa vạch kẻ và hình ảnh */
+}
+
+/* Vạch kẻ bên trái */
+.mac-image-line {
+  width: 4px; /* Độ rộng của vạch kẻ */
+  height: 100%; /* Chiều cao full so với hình ảnh */
+  background-color: #ccc; /* Màu vạch kẻ */
+  border-radius: 2px; /* Bo góc nếu cần */
+}
+
+/* Hình ảnh */
+.mac-image {
+  width: 100%; /* Chiều rộng full */
+  height: auto; /* Giữ tỉ lệ hình ảnh */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+  border-radius: 4px; /* Bo góc nếu cần */
+}
